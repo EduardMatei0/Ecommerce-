@@ -9,6 +9,7 @@ const {
   listRelated,
   listCategories,
   listBySearch,
+  listSearch,
   photo
 } = require('../controller/productController');
 const {
@@ -36,6 +37,7 @@ router.put(
 );
 
 router.get('/products', list);
+router.get('/products/search', listSearch);
 router.get('/products/related/:productId', listRelated);
 router.get('/products/categories', listCategories);
 router.get('/product/photo/:productId', photo);
